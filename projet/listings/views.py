@@ -18,3 +18,5 @@ def portfolio(request):
         'projet' : projet
     }
     return render(request, 'listings/portfolio.html', context)
+def forms(request):
+    return render(request, 'listings/forms.html')
