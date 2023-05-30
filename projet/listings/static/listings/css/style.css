@@ -2038,3 +2038,10 @@ a.post-title:hover,
   display: flex;
   flex-wrap: wrap;
 }
+
+.big_div_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}

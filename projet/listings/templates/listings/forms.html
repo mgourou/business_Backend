@@ -102,8 +102,65 @@
                 </ol><!-- /.breadcrumb -->
 
             </div>
+
+            <div class="big_div_form">
+                <div class="div_form">
+                    <form method="post">
+                        {% csrf_token %} 
+                        {{ blog_form.as_p }}
+                        <button type="submit" class="btn btn-primary text-warning">Ajouter</button>
+                    </form>
+            </div>
+
+            <div class="div_form">
+                <form method="post">
+                    {% csrf_token %} 
+                    {{ projet_form.as_p }}
+                    <button type="submit" class="btn btn-primary text-warning">Ajouter</button>
+                </form>
+            </div>
+            </div>
+        </div>
             
         </section><!-- /.section-blog -->
+        <section>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Titre du blog</th>
+                    <th>Chemin Image</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for blog in blogs %}
+                    <tr>
+                      <td>{{ blog.nom }}</td>
+                      <td>{{ blog.img }}</td>
+                      <td>{{ blog.description }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nom du projet</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for projet in projets %}
+                    <tr>
+                      <td>{{ projet.nom }}</td>
+                      <td>{{ projet.description }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              
+        </section>
 
         <section class="social-networks">
 
