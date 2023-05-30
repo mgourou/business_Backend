@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+{% extends "base.html" %}
+{% load static %}
+{% block head_content%}
 
     <!-- Basic Page Needs
     ================================================== -->
@@ -21,7 +20,7 @@
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" %}>
 
     <!-- Favicon
     ================================================== -->
@@ -31,21 +30,21 @@
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href="../../static/listings/css/bootstrap.min.css" rel="stylesheet">
+    <link href={% static "listings/css/bootstrap.min.css" %} rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../static/listings/css/style.css" rel="stylesheet">
-    <link href="../../static/listings/css/responsive.css" rel="stylesheet">
-    <link href="../../static/listings/css/colors.css" rel="stylesheet">
+    <link href={% static "listings/css/style.css" %} rel="stylesheet">
+    <link href={% static "listings/css/responsive.css" %} rel="stylesheet">
+    <link href={% static "listings/css/colors.css" %} rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" %}></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" %}></script>
     <![endif]-->
 
-</head>
-
+{%endblock head_content%}
+{%block content %}
 <body>
 
     <header id="masthead" class="site-header site-header-fill">
@@ -442,14 +441,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../../static/listings/js/bootstrap.min.js"></script>
-    <script src="../../static/listings/js/jquery.slicknav.min.js"></script>
-    <script src="../../static/listings/js/slick.min.js"></script>
-    <script src="../../static/listings/js/skrollr.min.js"></script>
-    <script src="../../static/listings/js/jquery.countTo.min.js"></script>
-    <script src="../../static/listings/js/jquery.shuffle.min.js"></script>
-    <script src="../../static/listings/js/script.js"></script>
+    <script src={% static "listings/js/bootstrap.min.js" %}></script>
+    <script src={% static "listings/js/jquery.slicknav.min.js" %}></script>
+    <script src={% static "listings/js/slick.min.js" %}></script>
+    <script src={% static "listings/js/skrollr.min.js" %}></script>
+    <script src={% static "listings/js/jquery.countTo.min.js" %}></script>
+    <script src={% static "listings/js/jquery.shuffle.min.js" %}></script>
+    <script src={% static "listings/js/script.js" %}></script>
 
 </body>
-
-</html>
+{% endblock content %}

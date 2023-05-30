@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% load static %}
+{% block head_content%}
+
 
     <!-- Basic Page Needs
     ================================================== -->
@@ -24,18 +25,18 @@
 
     <!-- Favicon
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../static/listings/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../static/listings/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href={% static "listings/img/apple-touch-icon.png" %}>
+    <link rel="icon" type="image/png" sizes="16x16" href={% static "listings/img/favicon.png" %}>
     
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href="../../static/listings/css/bootstrap.min.css" rel="stylesheet">
+    <link href={% static "listings/css/bootstrap.min.css" %} rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../static/listings/css/style.css" rel="stylesheet">
-    <link href="../../static/listings/css/responsive.css" rel="stylesheet">
-    <link href="../../static/listings/css/colors.css" rel="stylesheet">
+    <link href={% static "listings/css/style.css" %} rel="stylesheet">
+    <link href={% static "listings/css/responsive.css" %} rel="stylesheet">
+    <link href={% static "listings/css/colors.css" %} rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +44,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+{%endblock head_content%}
+{%block content %}
 <body>
 
     <header id="masthead" class="site-header site-header-fill">
@@ -91,7 +93,7 @@
 
                 <div class="text-center">
 
-                    <h1 class="section-title-big">Blog</h1>
+                    <h1 class="section-title-big">Forms</h1>
                     <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
                 </div>
@@ -105,6 +107,7 @@
 
             <div class="big_div_form">
                 <div class="div_form">
+                    <h3>Ajout dans la page Blog</h3>
                     <form method="post">
                         {% csrf_token %} 
                         {{ blog_form.as_p }}
@@ -113,6 +116,7 @@
             </div>
 
             <div class="div_form">
+                <h3>Ajout dans la page PortFolio</h3>
                 <form method="post">
                     {% csrf_token %} 
                     {{ projet_form.as_p }}
@@ -124,6 +128,7 @@
             
         </section><!-- /.section-blog -->
         <section>
+            <h1>Table récapitulative</h1>
             <table>
                 <thead>
                   <tr>
@@ -253,13 +258,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-    <script src="../../static/listings/js/bootstrap.min.js"></script>
-    <script src="../../static/listings/js/jquery.slicknav.min.js"></script>
-    <script src="../../static/listings/js/slick.min.js"></script>
-    <script src="../../static/listings/js/touchswipe.min.js"></script>
-    <script src="../../static/listings/js/skrollr.min.js"></script>
-    <script src="../../static/listings/js/jquery.countTo.min.js"></script>
-    <script src="../../static/listings/js/script.js"></script>
+    <script src={% static "listings/js/bootstrap.min.js" %}></script>
+    <script src={% static "listings/js/jquery.slicknav.min.js" %}></script>
+    <script src={% static "listings/js/slick.min.js" %}></script>
+    <script src={% static "listings/js/touchswipe.min.js" %}></script>
+    <script src={% static "listings/js/skrollr.min.js" %}></script>
+    <script src={% static "listings/js/jquery.countTo.min.js" %}></script>
+    <script src={% static "listings/js/script.js" %}></script>
 
 </body>
-</html>
+{% endblock content %}

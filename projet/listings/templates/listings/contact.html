@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% load static %}
+{% block head_content%}
 
     <!-- Basic Page Needs
     ================================================== -->
@@ -24,18 +24,18 @@
 
     <!-- Favicon
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../static/listings/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../static/listings/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href={% static "listings/img/apple-touch-icon.png" %}>
+    <link rel="icon" type="image/png" sizes="16x16" href={% static "listings/img/favicon.png" %}>
 
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href="../../static/listings/css/bootstrap.min.css" rel="stylesheet">    
+    <link href={% static "listings/css/bootstrap.min.css" %} rel="stylesheet">    
 
     <!-- Custom styles for this template -->
-    <link href="../../static/listings/css/style.css" rel="stylesheet">
-    <link href="../../static/listings/css/responsive.css" rel="stylesheet">
-    <link href="../../static/listings/css/colors.css" rel="stylesheet">
+    <link href={% static "listings/css/style.css" %} rel="stylesheet">
+    <link href={% static "listings/css/responsive.css" %}  rel="stylesheet">
+    <link href={% static "listings/css/colors.css" %}  rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +43,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+{%endblock head_content%}
+{%block content %}
 <body>
 
     <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(59,58,54,0); border-bottom-color: rgba(226,226,226,0);" data-top-bottom="background: rgba(59,58,54,1); border-bottom-color: rgba(226,226,226,1);">
@@ -247,13 +248,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-    <script src="../../static/listings/js/bootstrap.min.js"></script>
-    <script src="../../static/listings/js/jquery.slicknav.min.js"></script>
-    <script src="../../static/listings/js/slick.min.js"></script>
-    <script src="../../static/listings/js/touchswipe.min.js"></script>
-    <script src="../../static/listings/js/skrollr.min.js"></script>
+    <script src={% static "listings/js/bootstrap.min.js" %}></script>
+    <script src={% static "listings/js/jquery.slicknav.min.js" %}></script>
+    <script src={% static "listings/js/slick.min.js" %}></script>
+    <script src={% static "listings/js/touchswipe.min.js" %}></script>
+    <script src={% static "listings/js/skrollr.min.js" %}></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-    <script src="../../static/listings/js/script.js"></script>
+    <script src={% static "listings/js/script.js" %}></script>
 
 </body>
-</html>
+{% endblock content %}
